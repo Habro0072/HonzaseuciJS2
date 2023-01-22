@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+#but,#but2{
+    background-color: blue;
+    width: 10vw;
+    height: 10vh;
+
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#demo{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.body{
+    
+    min-width: 100vw;
+    min-height: 100vh;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.color_buttons{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#red{
+    background-color: red;
+    width: 10vw;
+    height: 10vh;
+
+    margin-right: 50px;
+    
+}
+#green{
+    background-color: green;
+    width: 10vw;
+    height: 10vh;
+
+    margin-right: 50px;
+   
+    
+}
+#blue{
+    background-color: blue;
+    width: 10vw;
+    height: 10vh;
+
+    margin-right: 50px;
+    
+}

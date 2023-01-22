@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="../tools/index.css">
+        </head>
+        <style>
+            .colorBtn {
+                margin-right: 50px;
+                margin-top: 50px;
+                margin-left: 50px;
+
+                width: 10vw;
+                height: 10vh;
+
+                
+                
+
+            }
+            #kontent{
+                min-width: 100vw;
+                min-height: 100vh;
+                
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <script src="../tools/index.js"></script>
+        <body>
+
+            <div class="content">
+                <div class="button" id="btn">
+                    <button id="but"></button>
+                    <button id="but2"></button>
+                 </div>  
+            </div>
+
+            <!--<div id = "kontent"></div>-->
+
+                <script>     
+                        
+                        let c =1;   
+                        function colorSelector(idPrvku,barvy) {
+                            c=c+1;
+                            var listBrand =barvy || ['RED','GREEN','BLUE',"ORANGE"];
+                            let vrapper = document.body.appendChild(document.createElement("div")); //document.getElementById("kontent");
+                            let b = document.getElementById(idPrvku);
+                            
+                            listBrand.push("BROWN");
+                            listBrand.reverse();
+                           
+
+
+                            let ddiv = document.createElement("div");
+                            ddiv.id = "abc"+c;
+                            console.log("elementy",vrapper,"ddiv",ddiv);
+                            vrapper.appendChild(ddiv);
+                        
+                            let klyk = function(e) {
+                                 console.log("funguje"); 
+                            vrapper.style.display="flex";
+                            }
+                                vrapper.style.display="none";
+                            function printBtn() {
+                               // for (let i = 0; i < listBrand.length; i++) {
+                                for (let color of listBrand) {
+                                    let btn = document.createElement("button");
+                                    btn.className = "colorBtn";
+                                    //let color = listBrand[i];
+                                    
+                                    btn.style.backgroundColor = color;
+
+                                    let klzk = function(e){
+                                        console.log("tlacitka jedou",color);
+                                        b.style.background=color;
+                                        btn.style.display = "flex";
+                                        vrapper.style.display ="none";
+                                        
+                                    }
+                                    btn.addEventListener("click", klzk);
+                                    vrapper.appendChild(btn);
+                                    
+                                    
+                                }
+                            }
+                            printBtn();
+                            
+                            b.addEventListener("click", klyk );
+                        }        
+                        
+                </script>
+
+                <script>
+                    
+                    colorSelector("but");
+                    colorSelector("but2");
+                    
+                    
+
+
+                </script>
+            
+        </body>
+    </html>
